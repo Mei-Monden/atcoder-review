@@ -13,4 +13,5 @@ https://atcoder.jp/contests/abc360/tasks/abc360_b
 
 ruby
 ![alt text](b_ruby.png)
-
+javascript
+![alt text](b_javascript.png)

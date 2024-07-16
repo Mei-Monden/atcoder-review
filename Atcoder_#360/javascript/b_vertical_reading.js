@@ -1,5 +1,5 @@
 function Main(input) {
-  input = input.trim().split('\n');
+  input = input.trim().split(' ');
   const S = input[0];
   const T = input[1];
 
@@ -8,7 +8,7 @@ function Main(input) {
 
   let found = false;
 
-  for (let w = 1; w <= n; w++) {
+  for (let w = 1; w < n; w++) {
     for (let c = 1; c <= w; c++) {
       let new_string = "";
       let idx = c - 1;
