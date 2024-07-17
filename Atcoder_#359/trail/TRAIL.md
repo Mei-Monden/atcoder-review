@@ -8,10 +8,10 @@ javascript
 
 
 
-<!-- B問題
+B問題
 https://atcoder.jp/contests/abc359/tasks/abc359_b
 
 ruby
 ![alt text](b_ruby.png)
 javascript
-![alt text](b_javascript.png) -->
+![alt text](b_javascript.png)
