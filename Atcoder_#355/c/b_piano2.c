@@ -1,48 +1,50 @@
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-// int compare(const void *a, const void *b) {
-//     return (*(int*)a - *(int*)b);
-// }
+int compare(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);
+}
 
-// int main() {
-//     int N, M;
+int main() {
+    int N, M;
     
-//     scanf("%d", &N);
-//     int A[N];
-//     for (int i = 0; i < N; i++) {
-//         scanf("%d", &A[i]);
-//     }
+    if (scanf("%d %d", &N, &M) != 2) {
+        return 1;
+    }
 
-//     scanf("%d", &M);
-//     int B[M];
-//     for (int i = 0; i < M; i++) {
-//         scanf("%d", &B[i]);
-//     }
+    int A[N], B[M], C[N + M];
+    int inA[201] = {0};
 
-//     int C[N + M];
-//     for (int i = 0; i < N; i++) {
-//         C[i] = A[i];
-//     }
-//     for (int i = 0; i < M; i++) {
-//         C[N + i] = B[i];
-//     }
+    for (int i = 0; i < N; i++) {
+        if (scanf("%d", &A[i]) != 1) {
+            return 1;
+        }
+        C[i] = A[i];
+        inA[A[i]] = 1;
+    }
 
-//     qsort(C, N + M, sizeof(int), compare);
+    for (int i = 0; i < M; i++) {
+        if (scanf("%d", &B[i]) != 1) {
+            return 1;
+        }
+        C[N + i] = B[i];
+    }
 
-//     int is_consecutive = 0;
-//     for (int i = 1; i < N + M; i++) {
-//         if (C[i] == C[i - 1]) {
-//             is_consecutive = 1;
-//             break;
-//         }
-//     }
+    qsort(C, N + M, sizeof(int), compare);
 
-//     if (is_consecutive) {
-//         printf("Yes\n");
-//     } else {
-//         printf("No\n");
-//     }
+    int is_consecutive = 0;
+    for (int i = 0; i < N + M - 1; i++) {
+        if (inA[C[i]] && inA[C[i + 1]]) {
+            is_consecutive = 1;
+            break;
+        }
+    }
 
-//     return 0;
-// }
+    if (is_consecutive) {
+        printf("Yes\n");
+    } else {
+        printf("No\n");
+    }
+
+    return 0;
+}
