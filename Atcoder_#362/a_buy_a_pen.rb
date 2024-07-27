@@ -3,11 +3,12 @@ C = gets.chomp
 
 X = nil
 
-if C == "Red"
+case C
+when "Red"
   X = [G, B].min
-elsif C == "Green"
+when "Green"
   X = [R, B].min
-elsif C == "Blue"
+when "Blue"
   X = [R, G].min
 end
 

@@ -1,4 +1,4 @@
-function Main(input) {
+function main(input) {
 	const lines = input.split("\n");
   const [xa, ya] = lines[0].split(" ").map(Number);
   const [xb, yb] = lines[1].split(" ").map(Number);
@@ -7,7 +7,7 @@ function Main(input) {
   function distance(x1, y1, x2, y2) {
     return ((x2 - x1) ** 2 + (y2 - y1) ** 2);
   }
-  
+
   const ab = distance(xa, ya, xb, yb);
   const bc = distance(xb, yb, xc, yc);
   const ac = distance(xa, ya, xc, yc);
@@ -20,4 +20,4 @@ function Main(input) {
     console.log("No");
   }
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+main(require("fs").readFileSync("/dev/stdin", "utf8"));
