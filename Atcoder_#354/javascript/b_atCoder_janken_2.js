@@ -1,6 +1,5 @@
 function main(input) {
   const lines = input.trim().split('\n');
-  
   const n = parseInt(lines[0]);
 
   const users = [];
