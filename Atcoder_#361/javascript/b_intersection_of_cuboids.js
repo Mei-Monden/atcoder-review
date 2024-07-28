@@ -1,5 +1,5 @@
-function Main(input) {
-	const lines = input.split("\n");
+function main(input) {
+  const lines = input.split("\n");
   const [a,b,c,d,e,f] = lines[0].split(' ').map(Number);
   const [g,h,i,j,k,l] = lines[1].split(' ').map(Number);
 
@@ -12,4 +12,4 @@ function Main(input) {
   console.log(result);
 
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+main(require("fs").readFileSync("/dev/stdin", "utf8"));
