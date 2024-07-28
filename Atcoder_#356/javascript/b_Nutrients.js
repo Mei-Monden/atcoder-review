@@ -1,4 +1,4 @@
-function Main(input) {
+function main(input) {
 	const lines = input.split("\n");
   const [n, m] = lines[0].split(" ").map(Number);
   const a = lines[1].split(" ").map(Number);
@@ -21,4 +21,4 @@ function Main(input) {
 
   console.log(achieved ? "Yes" : "No");
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+main(require("fs").readFileSync("/dev/stdin", "utf8"));

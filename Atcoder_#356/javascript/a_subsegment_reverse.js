@@ -1,4 +1,4 @@
-function Main(input) {
+function main(input) {
 	const [n, l, r] = input.split(" ").map(Number);
 
   let a = Array.from({ length: n }, (_, i) => i + 1);
@@ -8,4 +8,4 @@ function Main(input) {
 
   console.log(a.join(' '));
 }
-Main(require("fs").readFileSync("/dev/stdin", "utf8"));
+main(require("fs").readFileSync("/dev/stdin", "utf8"));
