@@ -1,4 +1,4 @@
-function Main(input) {
+function main(input) {
   const inp = input.trim().split(" ");
   const s = inp[0];
   const t = inp[1];
@@ -10,4 +10,4 @@ function Main(input) {
 
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin', 'utf8');
-Main(input);
+main(input);

@@ -1,4 +1,4 @@
-function Main(input) {
+function main(input) {
   const lines = input.trim().split('\n');
   const [n, a] = lines[0].split(" ").map(Number);
   const t = lines[1].split(" ").map(Number);
@@ -19,6 +19,6 @@ function Main(input) {
 
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin', 'utf8');
-Main(input);
+main(input);
 
 
