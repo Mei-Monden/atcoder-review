@@ -1,4 +1,4 @@
-function Main(input) {
+function main(input) {
   const [a, b] = input.trim().split(' ').map(Number);
   let result;
 
@@ -17,4 +17,4 @@ function Main(input) {
 
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin', 'utf8');
-Main(input);
+main(input);
