@@ -1,10 +1,12 @@
 function main(input) {
-  const x = Number(input.trim());
+  const x =  BigInt(input);
 
-  if (x % 10 === 0) {
-    console.log(x / 10);
+  if (x % 10n === 0n) {
+    console.log((x / 10n).toString());
+  } else if  (x > 0) {
+    console.log((x / 10n + 1n).toString());
   } else {
-    console.log((x + 9) / 10);
+    console.log((x / 10n).toString());
   }
 }
 
